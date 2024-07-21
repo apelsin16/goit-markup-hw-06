@@ -37,28 +37,9 @@ a {
     margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-
-    .menu-button {
-        display: none;
-    }
-  }
-  
-@media screen and (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
 .header-container {
     display: flex;
     justify-content: space-between;
-    margin: 0;
     padding: 0;
 }
 
@@ -147,11 +128,8 @@ a {
 }
 
 .address {
-    font-style: normal;
-}
-
-.address-list {
     display: none;
+    font-style: normal;
 }
 
 .address-item:last-of-type {
@@ -163,7 +141,6 @@ a {
     letter-spacing: 0.02em;
     line-height: 1.5;
     display: block;
-    padding: 24px 0;
     transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .address-link:hover,
@@ -173,18 +150,23 @@ a {
 }
 
 .banner {
-    max-width: 320px;
     padding: 72px 52px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/banner-mob.jpg);
+        url(../images/people-office-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1157px) and (min-resolution: 192dpi) {
+    .banner {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-mob@2x.jpg);
+    }
 }
 
 .banner-title {
@@ -317,7 +299,7 @@ a {
 .team-image,
 .portfolio-image {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -465,7 +447,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
-    text-align-last: left;
+    text-align: left;
 }
 
 .footer-socials {
@@ -587,7 +569,7 @@ a {
 .modal {
     background: #FCFCFC;
     padding: 72px 24px 24px 24px;
-    width: 288px;
+    min-width: 288px;
     height: 95%;
     position: absolute;
     left: 50%;
@@ -868,4 +850,174 @@ a {
 
 .mobile-menu-socials {
     justify-content: start;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+
+    .header {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .banner-title {
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+
+    .nav-list {
+        display: flex;
+        margin-left: 120px;
+    }
+
+    .address-list {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .nav-link {
+        padding: 24px 0;
+    }
+
+    .nav-item {
+        margin-right: 40px;
+    }
+
+    .nav-item:last-of-type {
+        margin-right: 0;
+    }
+
+    .address-link {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+
+    .address-item:first-of-type {
+        margin-bottom: 12px;
+    }
+
+    .address {
+        display: block;
+    }
+
+    .about-list {
+        display: flex;
+        gap: 24px;
+        row-gap: 72px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-item {
+        margin-bottom: 0;
+    }
+
+    .team-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        row-gap: 64px;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        padding: 96px 108px;
+    }
+
+    .footer .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 72px;
+    }
+
+    .footer-form {
+        flex-direction: row;
+    }
+
+    .footer-socials {
+        margin: 0;
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+    
+    .footer-title {
+        text-align: left;
+    }
+
+    .modal {
+        height: 584px;
+    }
+}
+  
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .address {
+        display: flex;
+        align-items: center;
+    }
+
+    .address-list {
+        padding: 0;
+        display: flex;
+        gap: 40px;
+    } 
+
+    .address-item:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .address-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .banner {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    .banner-title {
+        width: 496px;
+        margin: 0 auto 48px;
+    }
+
+    .about-image-wrapper {
+        display: flex;
+    }
+
+    .about-title {
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .about-text {
+        font-weight: 400;
+    }
+
+    .footer-subscribe {
+        margin-left: auto;
+    }
+
+    .footer-socials {
+        margin-left: 120px;
+    }
 }
