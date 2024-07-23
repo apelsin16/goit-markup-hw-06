@@ -150,19 +150,32 @@ a {
 }
 
 .banner {
-    padding: 72px 52px;
+    padding: 72px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office-mob.jpg);
+        url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media only screen and (min-resolution: 192dpi) {
+    .banner {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office@2x.jpg);
+    }
+}
+
 @media only screen and (max-width: 1157px) and (min-resolution: 192dpi) {
+    .banner {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-tab@2x.jpg);
+    }
+}
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
     .banner {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/people-office-mob@2x.jpg);
@@ -281,8 +294,6 @@ a {
 
 .team {
     background-color: #F4F4FD;
-    padding-right: 12px;
-    padding-left: 12px;
 }
 
 .section-title {
@@ -852,6 +863,20 @@ a {
     justify-content: start;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .banner-title {
+        width: 216px;
+    }
+
+    .team-member:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .portfolio-list {
+        row-gap: 48px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container {
       max-width: 768px;
@@ -866,11 +891,17 @@ a {
         display: none;
     }
 
+    .banner {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-tab.jpg);
+    }
+
     .banner-title {
         font-size: 56px;
         line-height: 1.07;
         letter-spacing: 0.02em;
         text-align: center;
+        width: 496px;
     }
 
     .nav-list {
@@ -917,8 +948,13 @@ a {
         justify-content: center;
     }
 
+    .about-title {
+        text-align: left;
+    }
+
     .about-item {
         margin-bottom: 0;
+        width: calc((100% - 24px)/2);
     }
 
     .team-list {
@@ -929,8 +965,13 @@ a {
         flex-wrap: wrap;
     }
 
+    .team-member {
+        margin-bottom: 0;
+        
+    }
+
     .footer {
-        padding: 96px 108px;
+        padding: 96px 0;
     }
 
     .footer .container {
@@ -959,6 +1000,10 @@ a {
     .modal {
         height: 584px;
     }
+
+    .mobile-menu {
+        display: none;
+    }
 }
   
 @media screen and (min-width: 1158px) {
@@ -966,6 +1011,10 @@ a {
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .nav-list {
+        margin-left: 76px;
     }
 
     .address {
@@ -990,13 +1039,18 @@ a {
     }
 
     .banner {
-        padding-top: 188px;
-        padding-bottom: 188px;
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office.jpg);
     }
 
     .banner-title {
         width: 496px;
         margin: 0 auto 48px;
+    }
+
+    .section {
+        padding: 120px 0;
     }
 
     .about-image-wrapper {
@@ -1007,10 +1061,25 @@ a {
         text-align: left;
         font-size: 20px;
         line-height: 1.2;
+        font-weight: 500;
     }
 
     .about-text {
         font-weight: 400;
+    }
+
+    .portfolio-item {
+        width: calc((100% - 2*24px)/3);
+    }
+
+    .team-member {
+        margin-bottom: 0;
+        width: calc((100% - 3*24px)/4);
+    }
+
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .footer-subscribe {
